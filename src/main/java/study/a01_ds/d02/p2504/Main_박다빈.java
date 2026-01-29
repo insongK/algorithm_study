@@ -1,6 +1,9 @@
-package main.java.study.a01_ds.d01.p2504;
-import java.io.*;
-import java.util.*;
+package main.java.study.a01_ds.d02.p2504;
+
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Stack;
+
 public class Main_박다빈 {
     static Stack<Integer> stack = new Stack<>();
     static Map<Character, Integer> map = Map.of('(',-1,
