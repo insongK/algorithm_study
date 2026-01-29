@@ -1,12 +1,9 @@
-package my_test;
+package main.java.study.a01_ds.d02.p2504;
 
 import java.io.*;
 import java.util.*;
 
-public class test {
-	
-	
-	
+public class Main_조은진 {
 	public static void main (String[] args) throws IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		String s=br.readLine();
@@ -16,6 +13,7 @@ public class test {
 		int res=1, total=0, temp, temp2;
 		for(int i=0; i<s.length(); i++) {
 			c=s.charAt(i);
+			
 			switch(c) {
 			case '(':
 				stack.push(c);
@@ -34,7 +32,7 @@ public class test {
 				}else {
 					temp=num_stack.pop();
 					if(prev==')'||prev==']') {
-						num_stack.push(temp*2);
+						num_stack.push(temp*2);//중첩되는 경우 *2
 					}else {
 						if(num_stack.isEmpty()) {
 							num_stack.push(temp+2);
@@ -68,7 +66,7 @@ public class test {
 				}
 				break;
 			}
-			prev=c;
+			prev=c;// 이전을 저장한다.
 		}
 		while(!num_stack.isEmpty()) {
 			total+=num_stack.pop();
